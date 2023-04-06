@@ -4,8 +4,8 @@ import { Stack, Menu, MenuItem, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-
 import Logo from '../assets/images/Logo.png';
+import Bmi from './Bmi';
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -73,17 +73,20 @@ const Navbar = () => {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
-            <MenuItem onClick={handleMenuClose} component={Link} to="/bmi">
-              BMI
+            <MenuItem onClick={handleMenuClose}>
+              <Stack direction="row" gap="8px" fontFamily="Alegreya" fontSize="24px" alignItems="flex-end">
+                <Link to="/bmi" style={{ textDecoration: 'none', color: '#3A1212' }}>
+                  BMI
+                </Link>
+              </Stack>
             </MenuItem>
-            <MenuItem onClick={handleMenuClose} component={Link} to="/bmr">
-              BMR
-            </MenuItem>
+
           </Menu>
         </Stack>
-      </Stack>
-    </Stack>
-  );
-};
+        </Stack>
+                  <Bmi />
+                </Stack>
+              );
+            };
 
 export default Navbar;
