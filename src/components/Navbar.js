@@ -61,7 +61,7 @@ const Navbar = () => {
           Trainers
         </Link>
         <Stack direction="row"  gap="8px" fontFamily="Alegreya" fontSize="24px" alignItems="flex-end">
-          <span>Calculator</span>
+          <span>Calculators</span>
           <IconButton  sx ={{mb:'-11px' } } size ="large" onClick={handleMenuOpen}>
 
             <KeyboardArrowDownIcon sx={{fontSize:'40 px'}} />
