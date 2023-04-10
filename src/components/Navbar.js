@@ -4,6 +4,7 @@ import { Stack, Menu, MenuItem, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import BmiCalculator from './BmiCalculator';
+import BmrCalculator from './BmrCalculator';
 
 
 import Logo from '../assets/images/Logo.png';
@@ -58,8 +59,8 @@ const Navbar = () => {
         <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>
           Exercises
         </a>
-        <Link to="/trainers" style={{ textDecoration: 'none', color: '#3A1212' }}>
-          Trainers
+        <Link to="/login" style={{ textDecoration: 'none', color: '#3A1212' }}>
+          Login
         </Link>
         <Stack direction="row"  gap="8px" fontFamily="Alegreya" fontSize="24px" alignItems="flex-end">
           <span>Calculators</span>
@@ -80,9 +81,9 @@ const Navbar = () => {
 
 
             
-            <MenuItem onClick={handleMenuClose} component={Link} to="/bmr">
-              BMR
-            </MenuItem>
+<MenuItem onClick={handleMenuClose} component={Link} to="/calculators/bmr">
+  BMR
+</MenuItem>
           </Menu>
         </Stack>
       </Stack>
