@@ -10,18 +10,22 @@ import Footer from './components/Footer';
 import Login from "./components/Login";
 import Navbar from './components/Navbar';
 import BmiCalculator from './components/BmiCalculator';
+import BmrCalculator from './components/BmrCalculator';
 
 
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
     <Navbar/>
-    <Login/>
+
+  
+
    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/exercise/:id" element={<ExerciseDetail />} />
-      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/calculators/bmi" element ={<BmiCalculator/>} />
+      <Route path="/calculators/bmr" element ={<BmrCalculator/>} />
     </Routes>
     <Footer />
   </Box>
