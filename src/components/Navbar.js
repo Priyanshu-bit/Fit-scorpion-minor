@@ -58,8 +58,8 @@ const Navbar = () => {
         <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>
           Exercises
         </a>
-        <Link to="/trainers" style={{ textDecoration: 'none', color: '#3A1212' }}>
-          Trainers
+        <Link to="/login" style={{ textDecoration: 'none', color: '#3A1212' }}>
+          Login
         </Link>
         <Stack direction="row"  gap="8px" fontFamily="Alegreya" fontSize="24px" alignItems="flex-end">
           <span>Calculators</span>

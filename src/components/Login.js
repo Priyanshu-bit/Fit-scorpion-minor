@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-const LoginPage = () => {
+const Login = () => {
   
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [username, setUsername] = useState('');
@@ -27,8 +27,8 @@ const LoginPage = () => {
 
   return (
     <div>
-      <button onClick={handleToggleLoginForm} className="login-btn">{showLoginForm ? 'Hide Login Form' : 'Show Login Form'}</button>
-      {showLoginForm && (
+      
+      
         <form onSubmit={handleSubmit} className="login-form" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.2rem'}}>
           <label>
             <span>Username:</span>
@@ -40,9 +40,9 @@ const LoginPage = () => {
           </label>
           <button type="submit" className="login-submit">Login</button>
         </form>
-      )}
+      
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;
