@@ -15,12 +15,13 @@ import BmiCalculator from './components/BmiCalculator';
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
     <Navbar/>
-    <Login/>
+
+    
    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/exercise/:id" element={<ExerciseDetail />} />
-      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/calculators/bmi" element ={<BmiCalculator/>} />
     </Routes>
     <Footer />
