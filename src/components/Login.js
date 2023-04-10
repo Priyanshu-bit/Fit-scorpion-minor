@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import './Login.css';
 
 const LoginPage = () => {
+  
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -25,18 +27,18 @@ const LoginPage = () => {
 
   return (
     <div>
-      <button onClick={handleToggleLoginForm}>{showLoginForm ? 'Hide Login Form' : 'Show Login Form'}</button>
+      <button onClick={handleToggleLoginForm} className="login-btn">{showLoginForm ? 'Hide Login Form' : 'Show Login Form'}</button>
       {showLoginForm && (
-        <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem'}}>
-          <label style={{width: '100%'}}>
+        <form onSubmit={handleSubmit} className="login-form" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.2rem'}}>
+          <label>
             <span>Username:</span>
-            <input type="text" value={username} onChange={handleUsernameChange} style={{width: '100%', padding: '0.5rem', borderRadius: '0.5rem', border: 'none', backgroundColor: '#f0f0f0'}} />
+          <input type="text" value={username} onChange={handleUsernameChange} className="login-input" />
           </label>
-          <label style={{width: '100%'}}>
+          <label>
             <span>Password:</span>
-            <input type="password" value={password} onChange={handlePasswordChange} style={{width: '100%', padding: '0.5rem', borderRadius: '0.5rem', border: 'none', backgroundColor: '#f0f0f0'}} />
+            <input type="password" value={password} onChange={handlePasswordChange} className="login-input" />
           </label>
-          <button type="submit" style={{padding: '0.5rem 1rem', borderRadius: '0.5rem', border: 'none', backgroundColor: '#008000', color: 'white', fontWeight: 'bold'}}>Login</button>
+          <button type="submit" className="login-submit">Login</button>
         </form>
       )}
     </div>
