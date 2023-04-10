@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Stack, Menu, MenuItem, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import BmiCalculator from './BmiCalculator';
 
 
 import Logo from '../assets/images/Logo.png';
@@ -57,8 +58,8 @@ const Navbar = () => {
         <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>
           Exercises
         </a>
-        <Link to="/trainers" style={{ textDecoration: 'none', color: '#3A1212' }}>
-          Trainers
+        <Link to="/login" style={{ textDecoration: 'none', color: '#3A1212' }}>
+          Login
         </Link>
         <Stack direction="row"  gap="8px" fontFamily="Alegreya" fontSize="24px" alignItems="flex-end">
           <span>Calculators</span>
@@ -73,9 +74,12 @@ const Navbar = () => {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
-            <MenuItem onClick={handleMenuClose} component={Link} to="/bmi">
-              BMI
-            </MenuItem>
+            <MenuItem onClick={handleMenuClose} component={Link} to="/calculators/bmi">
+  BMI
+</MenuItem>
+
+
+            
             <MenuItem onClick={handleMenuClose} component={Link} to="/bmr">
               BMR
             </MenuItem>
