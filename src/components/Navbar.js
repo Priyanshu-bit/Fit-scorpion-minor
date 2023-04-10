@@ -4,9 +4,12 @@ import { Stack, Menu, MenuItem, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import BmiCalculator from './BmiCalculator';
+import './Navbar.css';
+
 
 
 import Logo from '../assets/images/Logo.png';
+
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -18,6 +21,7 @@ const Navbar = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+  
 
   return (
     <Stack

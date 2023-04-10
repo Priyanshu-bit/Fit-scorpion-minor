@@ -1,0 +1,116 @@
+
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    background: linear-gradient(to right, #DD2476, #2f4eff);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .navbar.active {
+    height: 110px;
+    background: linear-gradient(to right, #2f4eff, #DD2476);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  
+  }
+  
+  .navbar-toggle span {
+    display: inline-block; /* Set display to inline-block to treat the span as a container */
+    width: 30px;
+    height: 14px;
+    margin-bottom: 4.5px;
+    background-color: #fdfdfd; /* default color */
+    font-weight: bolder; /* Make the span element bold */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .navbar-toggle span:hover {
+    background-color: #F22; /* highlight color */
+  }
+  
+  .navbar-toggle span:active {
+    transform: scale(1.5); /* enlarge the element */
+    opacity: 0; /* make the element transparent */
+    background-color: transparent; /* hide the element */
+  }
+  
+
+.navbar-toggle.active span {
+  background-color: #fff; /* color when opened */
+}
+
+  
+  .navbar-toggle span:first-child {
+    transform-origin: top left;
+  }
+  
+  .navbar-toggle span:last-child {
+    transform-origin: bottom left;
+  }
+  
+  
+  .navbar-menu {
+    display: flex;
+    
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .navbar-menu li {
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .navbar.active .navbar-menu li {
+    opacity: 1;
+    transform: translateY(0);
+  
+  }
+  
+  .navbar-menu li a {
+    color: #fffcfc;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .navbar {
+      height: 80px;
+      padding: 0 50px;
+    }
+  
+    .navbar-menu {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .navbar-menu li {
+      margin: 0 20px;
+    }
+  }
