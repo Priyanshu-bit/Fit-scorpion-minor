@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Stack, Menu, MenuItem, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import BmiCalculator from './BmiCalculator';
 
 
 import Logo from '../assets/images/Logo.png';
@@ -73,9 +74,12 @@ const Navbar = () => {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
-            <MenuItem onClick={handleMenuClose} component={Link} to="/bmi">
-              BMI
-            </MenuItem>
+            <MenuItem onClick={handleMenuClose} component={Link} to="/calculators/bmi">
+  BMI
+</MenuItem>
+
+
+            
             <MenuItem onClick={handleMenuClose} component={Link} to="/bmr">
               BMR
             </MenuItem>
