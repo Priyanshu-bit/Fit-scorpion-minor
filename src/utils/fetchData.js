@@ -1,4 +1,4 @@
-export const exerciseOptions = {
+ export const exerciseOptions = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Key': '29cb6f12f9msh39225d50633d345p1bef88jsne715d769f9b2',
