@@ -13,6 +13,8 @@ import BmiCalculator from './components/BmiCalculator';
 import BmrCalculator from './components/BmrCalculator';
 
 
+
+
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
     <Navbar/>
