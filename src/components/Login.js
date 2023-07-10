@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-const LoginPage = () => {
-  
+const Login = () => {
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +16,7 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("log in successful")
+    alert('Log in successful!');
     // Perform login logic here
   };
 
@@ -25,24 +24,49 @@ const LoginPage = () => {
     setShowLoginForm(!showLoginForm);
   };
 
+  const handleCloseLoginForm = () => {
+    setShowLoginForm(false);
+  };
+
   return (
     <div>
-      <button onClick={handleToggleLoginForm} className="login-btn">{showLoginForm ? 'Hide Login Form' : 'Show Login Form'}</button>
       {showLoginForm && (
-        <form onSubmit={handleSubmit} className="login-form" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.2rem'}}>
-          <label>
-            <span>Username:</span>
-          <input type="text" value={username} onChange={handleUsernameChange} className="login-input" />
-          </label>
-          <label>
-            <span>Password:</span>
-            <input type="password" value={password} onChange={handlePasswordChange} className="login-input" />
-          </label>
-          <button type="submit" className="login-submit">Login</button>
-        </form>
+        <div className="modal-container">
+          <div className="modal-content">
+            <button className="close-button" onClick={handleCloseLoginForm}>
+              X
+            </button>
+            <form onSubmit={handleSubmit} className="login-form">
+              <label>
+                <span>Username:</span>
+                <input
+                  type="text"
+                  value={username}
+                  onChange={handleUsernameChange}
+                  className="login-input"
+                />
+              </label>
+              <label>
+                <span>Password:</span>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                  className="login-input"
+                />
+              </label>
+              <button type="submit" className="login-submit">
+                Log in
+              </button>
+            </form>
+          </div>
+        </div>
       )}
+      <button onClick={handleToggleLoginForm} className="login-button">
+        Log in
+      </button>
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;
