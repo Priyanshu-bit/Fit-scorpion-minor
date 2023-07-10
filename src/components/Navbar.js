@@ -26,13 +26,25 @@ const Navbar = () => {
       }}
       px="20px"
     >
-      <Link to="/">
-        <img
-          src={Logo}
-          alt="logo"
-          style={{ width: '48px', height: '48px', margin: '0px 20px' }}
-        />
-      </Link>
+    
+      <Link
+          to="/"
+          style={{
+            fontFamily : 'Dancing Script, cursive',
+            fontSize : 40,
+           // font-style: italic;
+            /* Other desired styles */
+            color: 'black',
+            fontWeight: '500',
+            textDecoration: 'none',
+            
+            //color: '#3A1212',
+            //borderBottom: '3px solid #FF2625',
+          }}
+        >
+          Fit Scorpion
+        </Link>
+
       <Stack
         direction="row"
         gap="40px"
