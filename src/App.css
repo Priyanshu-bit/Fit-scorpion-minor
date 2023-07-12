@@ -57,6 +57,10 @@ body {
   .detail-image {
     width: 729px;
     height: 742px;
+    border-bottom-right-radius: 5%;
+    
+    border-top-right-radius: 5%;
+    
    
   }
   
@@ -65,9 +69,9 @@ body {
     right: 40px;
     top: 0px;
     width: 600px;
-    height: 792px;
+    height: 770px;
     margin-top: -330px;
-    border-radius: 20px;
+    border-bottom-left-radius: 50px;
   
   }
   
@@ -184,4 +188,3 @@ body {
     background-color: #3A1212;
     transition: background-color 0.3s ease;
   }
-  
